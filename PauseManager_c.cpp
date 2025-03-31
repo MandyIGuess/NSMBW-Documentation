@@ -19,7 +19,7 @@
 
 /* RELATED FILES:
  - Pausewindow_c.cpp
- - OtasukeInfo_c.cpp
+ - dOtasukeInfo_c.cpp
 */
 
 /* NOTES:
