@@ -20,6 +20,9 @@ Feel free to remove any comments, they're just present to help explain what does
 - `dOtasukeInfo_c`: Prompt for starting or ending Super Guide Replays, as well as exiting Hint Movies
 - `Pausewindow_c`: Pause menu for levels
 
+### Utility
+- `dHeapAllocator_c`: Heap allocator for loading models or other resources
+
 ## Other Files
 - `general.h`: Contains general/non-specific functions from the game
 
