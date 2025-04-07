@@ -18,6 +18,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `dInfoWindow_c`: Savefile copy/deletion confirmation window
 - `dLetterWindow_c`: Bowser Jr.'s letter
 - `dOtasukeInfo_c`: Prompt for starting or ending Super Guide Replays, as well as exiting Hint Movies
+- `dSequenceBG_c`: Screen background for the Main Menu/Game Setup sequence
 - `Pausewindow_c`: Pause menu for levels
 
 ### Utility
