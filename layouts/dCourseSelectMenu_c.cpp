@@ -20,9 +20,6 @@
 // Size: 0x278
 class dCourseSelectMenu_c : public dBase_c {
 public:
-	m2d::EmbedLayout_c layout;					// 0x70
-	dStateWrapper_c<dCourseSelectMenu_c> state;	// 0x208
-
 	enum Animation {
 		IN_WINDOW = 0,
 		LOOP_WINDOW,
@@ -32,6 +29,9 @@ public:
 		OFF_BUTTON = 14,
 		OUT_WINDOW = 18
 	};
+
+	m2d::EmbedLayout_c layout;					// 0x70
+	dStateWrapper_c<dCourseSelectMenu_c> state;	// 0x208
 
 	nw4r::lyt::Pane	   *rootPane;		  // 0x244
 	nw4r::lyt::Picture *P_SBBase_01;	  // 0x248

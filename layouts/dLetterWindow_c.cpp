@@ -16,9 +16,6 @@
 // Size: 0x258
 class dLetterWindow_c : public dBase_c {
 public:
-	dStateWrapper_c<dLetterWindow_c> state; // 0x70
-	m2d::EmbedLayout_c layout;				// 0xAC
-
 	enum Animation {
 		IN_WINDOW = 0,
 		IN_BTN,
@@ -26,6 +23,9 @@ public:
 		HIT_BTN,
 		OUT_WINDOW
 	};
+
+	dStateWrapper_c<dLetterWindow_c> state; // 0x70
+	m2d::EmbedLayout_c layout;				// 0xAC
 
 	nw4r::lyt::Pane *rootPane;		  // 0x244
 	nw4r::lyt::TextBox *T_message_00; // 0x248

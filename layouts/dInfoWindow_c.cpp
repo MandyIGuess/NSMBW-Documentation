@@ -16,6 +16,13 @@
 // Size: 0x224
 class dInfoWindow_c : public dBase_c {
 public:
+	enum Animation {
+		IN_INFO_WINDOW = 0,
+		IN_SHADOW_BG,
+		OUT_INFO_WINDOW,
+		OUT_SHADOW_BG
+	};
+
 	m2d::EmbedLayout_c layout;			 // 0x70
 	nw4r::lyt::Pane *rootPane;			 // 0x208
 	nw4r::lyt::Pane *W_finishInfo_00;	 // 0x20C

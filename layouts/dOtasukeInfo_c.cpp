@@ -24,9 +24,6 @@
 // Size: 0x270
 class dOtasukeInfo_c : public dBase_c {
 public:
-	m2d::EmbedLayout_c layout;				// 0x70
-	dStateWrapper_c<dOtasukeInfo_c> state;  // 0x208
-
 	enum Animation {
 		IN_WINDOW,
 		IN_YES_BUTTON,
@@ -41,6 +38,9 @@ public:
 		OFF_NO_BUTTON,
 		OUT_WINDOW
 	};
+
+	m2d::EmbedLayout_c layout;				// 0x70
+	dStateWrapper_c<dOtasukeInfo_c> state;  // 0x208
 
 	nw4r::lyt::Pane *rootPane;	      // 0x244
 	nw4r::lyt::TextBox *T_infoS_00;   // 0x248

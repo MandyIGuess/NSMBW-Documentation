@@ -20,6 +20,18 @@
 // Size: 0x280
 class dSequenceBG_c : public dBase_c {
 public:
+	enum Animation {
+		IN_WINDOW = 0,
+		LOOP_BG_50,
+		LOOP_BG_40,
+		LOOP_BG_30,
+		LOOP_BG_20,
+		LOOP_BG_10,
+		LOOP_BG_00,
+		LOOP_CLOUD,
+		OUT_WINDOW
+	};
+
 	u32 _70;				   // 0x70
 	m2d::EmbedLayout_c layout; // 0x74
 

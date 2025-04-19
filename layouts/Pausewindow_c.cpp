@@ -25,9 +25,6 @@
 // Size: 0x298
 class Pausewindow_c : public dBase_c {
 public:
-	m2d::EmbedLayout_c layout;			  // 0x70
-	dStateWrapper_c<Pausewindow_c> state; // 0x208
-
 	enum Animation {
 		IN_WINDOW = 0,
 		LOOP_WINDOW,
@@ -41,6 +38,9 @@ public:
 		HIT_CONT_BUTTON,
 		HIT_EXIT_BUTTON
 	};
+
+	m2d::EmbedLayout_c layout;			  // 0x70
+	dStateWrapper_c<Pausewindow_c> state; // 0x208
 
 	nw4r::lyt::Picture *P_SBBase_00;	  // 0x244
 	nw4r::lyt::Picture *P_SBBase_02;	  // 0x248
