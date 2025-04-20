@@ -11,6 +11,8 @@ All addresses are based off the PALv1 version of the game.
 Feel free to remove any comments, they're just present to help explain what does what.
 
 ## Documented Classes
+- `dCyuukan_c`: Contains temporary level data that gets used when starting a level from a checkpoint
+- `dStartInfo_c`: Stores info when the level starts
 - `PauseManager_c`: Manages the stage Pause Menu
 
 ### Layouts
