@@ -10,11 +10,10 @@
  - Constructor:		0x80916110
  - Destructor:		0x80916310
  - State Init:		0x80917240
- - Class Instance:	N/A
+ - Class Instance:	0x8042A2BC (PauseManager_c::m_OtasukeInfo)
 */
 
 /* NOTES:
- - A pointer to this calss can be found at PauseManager_c::m_OtasukeInfo (0x8042A2BC)
  - The OK button cannot be pressed if mGameFlag & 4 (ReplayLoaded) is disabled
  - The following functions in general.h are used by functions in this class:
    - disablePauseForOtasukeInfo();
