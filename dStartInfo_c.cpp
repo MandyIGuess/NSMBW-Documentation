@@ -13,5 +13,6 @@
 
 // Size: 0x35
 class dStartInfo_c : public dCyuukan_c {
+public:
 	bool switchFlag; // 0x34 -- Status of the W3 switch
 };
