@@ -12,6 +12,7 @@ Feel free to remove any comments, they're just present to help explain what does
 
 ## Documented Classes
 - `dCyuukan_c`: Contains temporary level data that gets used when starting a level from a checkpoint
+- `dStageTimer_c`: Manages the level clock/timer
 - `dStartInfo_c`: Stores info when the level starts
 - `PauseManager_c`: Manages the stage Pause Menu
 
@@ -34,5 +35,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `general.h`: Contains general/non-specific functions from the game
 
 ## TODO
+- Classes todo:
+  - `EGG::Heap`, needed for dStageTimer_c::createInstance()
 - Add symbols for functions
 - Add cleaned up and improved Newer headers(?)
