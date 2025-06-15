@@ -23,6 +23,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `dOtasukeInfo_c`: Prompt for starting or ending Super Guide Replays, as well as exiting Hint Movies
 - `dSequenceBG_c`: Screen background for the Main Menu/Game Setup sequence
 - `dStockItemShadow_c`: Item counts and button "shadows" for the Stocked Items/Powerup screen
+- `dWorldSelectGuide_c`: Title and button prompts for the World Selection screen
 - `Pausewindow_c`: Pause menu for levels
 
 ### Scenes
