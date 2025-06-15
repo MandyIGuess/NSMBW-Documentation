@@ -69,8 +69,7 @@ public:
 	bool buttonHit;			// 0x293
 	bool animationActive;	// 0x294
 	bool needsToSetStrings; // 0x295 - If true, BMG strings will be written to the buttons during the InitWait state
-	u8  _296;				// 0x296
-	u8  _297;				// 0x297
+	u8   pad[2];			// 0x296
 
 
 	int onCreate();  // 0x8015A750
