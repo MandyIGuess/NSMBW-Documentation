@@ -20,6 +20,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `dCourseSelectMenu_c`: Pause menu for the World Map
 - `dInfoWindow_c`: Savefile copy/deletion confirmation window
 - `dLetterWindow_c`: Bowser Jr.'s letter
+- `dModelPlayGuide_c`: Frame shown on-screen during Hint Movies
 - `dOtasukeInfo_c`: Prompt for starting or ending Super Guide Replays, as well as exiting Hint Movies
 - `dSequenceBG_c`: Screen background for the Main Menu/Game Setup sequence
 - `dStockItemShadow_c`: Item counts and button "shadows" for the Stocked Items/Powerup screen
