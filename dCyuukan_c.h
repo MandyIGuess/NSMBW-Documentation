@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* dCyuukan_c
 
  - Vtable:			0x80311130

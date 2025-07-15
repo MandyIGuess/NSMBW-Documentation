@@ -1,3 +1,7 @@
+#pragma once
+#include <game.h>
+#include "PauseManager_c.h"
+
 /* PAUSEWINDOW
  - Actor ID 710 [KR/TW: 712; CN: 714]
  - Sprite ID N/A
@@ -11,10 +15,6 @@
  - Destructor:		0x8015A6C0
  - State Init:		0x8015B460
  - Class Instance:	0x8042A61C
-*/
-
-/* RELATED FILES:
- - PauseManager_c.cpp
 */
 
 /* NOTES:

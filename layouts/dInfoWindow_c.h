@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* INFO_WINDOW
  - Actor ID 718 [KR/TW: 720; CN: 722]
  - Sprite ID N/A

@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* COURSE_SELECT_MENU
  - Actor ID 693 [KR/TW: 693; CN: 695]
  - Sprite ID N/A

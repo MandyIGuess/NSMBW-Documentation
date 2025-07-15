@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* dStageTimer_c
 
  - Vtable:			0x8031B358

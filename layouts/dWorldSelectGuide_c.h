@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* WORLD_SELECT_GUIDE
  - Actor ID 690 [KR/TW: 690; CN: 692]
  - Sprite ID N/A

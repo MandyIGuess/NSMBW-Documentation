@@ -1,3 +1,7 @@
+#pragma once
+#include <game.h>
+#include "dCyuukan_c.h"
+
 /* dStartInfo_c
 
  - Vtable:			N/A
@@ -5,10 +9,6 @@
  - Destructor:		N/A
  - State Init:		N/A
  - Class Instance:	0x80359054 (dInfo_c::m_startInfo)
-*/
-
-/* RELATED FILES:
- - dCyuukan_c.cpp
 */
 
 // Size: 0x35

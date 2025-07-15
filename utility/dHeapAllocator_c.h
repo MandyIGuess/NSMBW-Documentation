@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 // Heap Allocator used by some actors, add into your `g3dhax.h` file, below the `mHeapAllocator_c` class
 
 // Size: 0x1C

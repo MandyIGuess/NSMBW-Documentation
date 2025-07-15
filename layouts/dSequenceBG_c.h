@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* SEQUENCE_BG
  - Actor ID 721 [KR/TW: 723; CN: 725]
  - Sprite ID N/A

@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* STOCK_ITEM_SHADOW
  - Actor ID 696 [KR/TW: 696; CN: 697]
  - Sprite ID N/A

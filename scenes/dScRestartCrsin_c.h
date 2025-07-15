@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* RESTART_CRSIN
  - Actor ID 6
  - Sprite ID N/A

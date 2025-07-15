@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 // Miscellaneous and General functions/documentation
 // Take whatever you need and put it into your game.h file
 

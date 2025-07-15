@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* MODEL_PLAY_GUIDE
  - Actor ID 733 [KR/TW: 735; CN: 737]
  - Sprite ID N/A

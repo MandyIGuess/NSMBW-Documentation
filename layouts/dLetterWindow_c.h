@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* LETTER_WINDOW
  - Actor ID 746 [KR/TW: 748; CN: 750]
  - Sprite ID N/A

@@ -1,3 +1,6 @@
+#pragma once
+#include <game.h>
+
 /* OTASUKE_INFO
  - Actor ID 709 [KR/TW: 711; CN: 713]
  - Sprite ID N/A
