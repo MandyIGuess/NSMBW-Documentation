@@ -17,7 +17,6 @@
  - The OK button cannot be pressed if mGameFlag & 4 (ReplayLoaded) is disabled
  - The following functions in general.h are used by functions in this class:
    - disablePauseForOtasukeInfo();
-   - returnToPeachCastle();
 */
 
 // Size: 0x270

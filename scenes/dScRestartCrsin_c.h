@@ -26,6 +26,9 @@ public:
 	int onDraw();		 // 0x80923B50
 	int onDelete();		 // 0x80923B20 -- Resets FadeIn/FadeOutFrame to 30
 
+	static void startTitle(bool isReplay, u32 sceneParam); // 0x801018E0 -- Begins the titlescreen (01-40) or a title replay. Formerly known as StartTitleScreenStage
+	static void reStartPeachCastle();					   // 0x801019D0 -- Begins the Peach's Castle stage (01-41)
+
 	static dInfo_c::StartGameInfo_s *m_startGameInfo; // 0x80374060
 	static dScRestartCrsin_c *build();				  // 0x80923970
 };
