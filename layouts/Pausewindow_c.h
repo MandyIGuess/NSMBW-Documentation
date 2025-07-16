@@ -4,9 +4,6 @@
 
 /* PAUSEWINDOW
  - Actor ID 710 [KR/TW: 712; CN: 714]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x80327D24
  - Build Function:	0x8015A480
@@ -44,7 +41,7 @@ public:
 
 	nw4r::lyt::Picture *P_SBBase_00;	  // 0x244
 	nw4r::lyt::Picture *P_SBBase_02;	  // 0x248
-	nw4r::lyt::Picture *P_shadowBlack;	  // 0x24C - Shown if Exit option is unavailable
+	nw4r::lyt::Picture *P_shadowBlack;	  // 0x24C -- Shown if Exit option is unavailable
 	nw4r::lyt::Picture *P_coin_00;		  // 0x250
 	nw4r::lyt::Pane    *W_N_pauseMenu_00; // 0x254
 	nw4r::lyt::TextBox *T_tuzukeru_00;	  // 0x258
@@ -56,31 +53,35 @@ public:
 	nw4r::lyt::TextBox *T_corsePic_00;	  // 0x270
 	nw4r::lyt::TextBox *T_osusumeText_00; // 0x274
 	nw4r::lyt::Pane    *N_worldText_00;   // 0x278
-	nw4r::lyt::Pane    *N_osusumeText_00; // 0x27C - Set invisible by setupLevelData()
-	nw4r::lyt::Pane    *N_multiText_00;   // 0x280 - Set invisible by setupLevelData()
+	nw4r::lyt::Pane    *N_osusumeText_00; // 0x27C -- Set invisible by setupLevelData()
+	nw4r::lyt::Pane    *N_multiText_00;   // 0x280 -- Set invisible by setupLevelData()
 
 	int nextButton;    // 0x284
 	int currentButton; // 0x288
-	int windowColorID; // 0x28C - Determines what color will be assigned to W_N_pauseMenu_00 (character ID of the player opening the menu)
+	int windowColorID; // 0x28C -- Determines what color will be assigned to W_N_pauseMenu_00 (character ID of the player opening the menu)
 
 	bool layoutLoaded;		// 0x290
 	bool visible;			// 0x291
 	bool menuCancelled;		// 0x292
 	bool buttonHit;			// 0x293
 	bool animationActive;	// 0x294
-	bool needsToSetStrings; // 0x295 - If true, BMG strings will be written to the buttons during the InitWait state
+	bool needsToSetStrings; // 0x295 -- If true, BMG strings will be written to the buttons during the InitWait state
 	u8   pad[2];			// 0x296
 
+
+	Pausewindow_c();  // 0x8015A4B0
+	~Pausewindow_c(); // 0x8015A6C0
 
 	int onCreate();  // 0x8015A750
 	int onExecute(); // 0x8015A950
 	int onDraw();	 // 0x8015A9D0
 	int onDelete();  // 0x8015AA10
 
-	void loadInfo();	   // 0x8015AA50 - Writes world number and level number/icon to the layout
-	void setupLevelData(); // 0x8015AC60 - Hides some panes and runs loadInfo() if the game isn't in Coin Battle mode
-	void updateCursor();   // 0x8015AD70 - Updates SelectCursor to target the selected button
+	void loadInfo();	   // 0x8015AA50 -- Writes world number and level number/icon to the layout
+	void setupLevelData(); // 0x8015AC60 -- Hides some panes and runs loadInfo() if the game isn't in Coin Battle mode
+	void updateCursor();   // 0x8015AD70 -- Updates SelectCursor to target the selected button
 
+	static Pausewindow_c *build();  // 0x8015A480
 	static Pausewindow_c *instance; // 0x8042A61C
 
 	USING_STATES(Pausewindow_c);

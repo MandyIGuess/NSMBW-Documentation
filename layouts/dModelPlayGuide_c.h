@@ -3,17 +3,12 @@
 
 /* MODEL_PLAY_GUIDE
  - Actor ID 733 [KR/TW: 735; CN: 737]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x80948B10
  - Build Function:	0x80794F90
  - Vtable:			0x80948B70
  - Constructor:		0x80794FC0
  - Destructor:		0x80795010
- - State Init:		N/A
- - Class Instance:	N/A
 */
 
 // Size: 0x210
@@ -26,6 +21,9 @@ public:
 	u8   pad[3];	   // 0x20D
 
 
+	dModelPlayGuide_c();  // 0x80794FC0
+	~dModelPlayGuide_c(); // 0x80795010
+
 	int onCreate();		 // 0x80795080
 	int beforeExecute(); // 0x807951C0
 	int onExecute();	 // 0x80795200
@@ -33,4 +31,6 @@ public:
 	int onDelete();		 // 0x80795280
 
 	bool loadLayout(); // 0x80795100 -- Loads layout data
+
+	static dModelPlayGuide_c *build(); // 0x80794F90
 };

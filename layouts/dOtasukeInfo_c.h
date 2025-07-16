@@ -3,13 +3,10 @@
 
 /* OTASUKE_INFO
  - Actor ID 709 [KR/TW: 711; CN: 713]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
- - Profile Struct:	0x8098aa88
- - Build Function:	0x809160e0
- - Vtable:			0x8098acc0
+ - Profile Struct:	0x8098AA88
+ - Build Function:	0x809160E0
+ - Vtable:			0x8098ACC0
  - Constructor:		0x80916110
  - Destructor:		0x80916310
  - State Init:		0x80917240
@@ -56,12 +53,15 @@ public:
 
 	bool layoutLoaded;   // 0x268
 	bool visible;		 // 0x269
-	u8 selection;		 // 0x26A - 0: No, 1: Yes
-	bool disableInput;   // 0x26B - Enabling this skips the button input logic (the retail game never enables this)
-	bool hideExitPrompt; // 0x26C - Enabling this will hide the Exit prompt on the level HUD
-	bool willPause;		 // 0x26D - When enabled, the game will pause while the menu is active
+	u8 selection;		 // 0x26A -- 0: No, 1: Yes
+	bool disableInput;   // 0x26B -- Enabling this skips the button input logic (the retail game never enables this)
+	bool hideExitPrompt; // 0x26C -- Enabling this will hide the Exit prompt on the level HUD
+	bool willPause;		 // 0x26D -- When enabled, the game will pause while the menu is active
 	u8 pad[2];			 // 0x26E
 
+
+	dOtasukeInfo_c();  // 0x809160E0
+	~dOtasukeInfo_c(); // 0x80916310
 
 	int onCreate();		 // 0x809163A0
 	int beforeExecute(); // 0x80916510
@@ -69,11 +69,14 @@ public:
 	int onDraw();		 // 0x80916630
 	int onDelete();		 // 0x80916670
 
-	bool loadLayout();	  // 0x80916430 - Loads layout data and animations, gets panes in the class, calls setupStrings()
-	void setupStrings();  // 0x809166A0 - Writes the proper message string to the T_infoS_00 and T_info_00 textboxes
-	void updateCursor();  // 0x80916680 - Updates SelectCursor to target the selected button
-	void disableReplay(); // 0x80916760 - Disables Super Guide replay, and gives the player control of Luigi
-	void startReplay();   // 0x809167D0 - Sets state to OtehonCourseOutWait, and goes to the RESTART_CRSIN scene (restarting the level in Super Guide mode)
+	bool loadLayout();	  // 0x80916430 -- Loads layout data and animations, gets panes in the class, calls setupStrings()
+	void setupStrings();  // 0x809166A0 -- Writes the proper message string to the T_infoS_00 and T_info_00 textboxes
+	void updateCursor();  // 0x80916680 -- Updates SelectCursor to target the selected button
+	void disableReplay(); // 0x80916760 -- Disables Super Guide replay, and gives the player control of Luigi
+	void startReplay();   // 0x809167D0 -- Sets state to OtehonCourseOutWait, and goes to the RESTART_CRSIN scene (restarting the level in Super Guide mode)
+
+	static dOtasukeInfo_c *instance; // 0x8042A2BC -- PauseManager_c::m_OtasukeInfo_p
+	static dOtasukeInfo_c *build();  // 0x809160E0
 
 	USING_STATES(dOtasukeInfo_c);
 	REF_NINTENDO_STATE(Initial);

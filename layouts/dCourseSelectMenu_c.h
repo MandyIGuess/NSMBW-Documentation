@@ -3,9 +3,6 @@
 
 /* COURSE_SELECT_MENU
  - Actor ID 693 [KR/TW: 693; CN: 695]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x809412C0
  - Build Function:	0x8077A750
@@ -13,7 +10,6 @@
  - Constructor:		0x8077A780
  - Destructor:		0x8077A980
  - State Init:		0x8077B4E0
- - Class Instance:	N/A
 */
 
 /* NOTES:
@@ -41,8 +37,8 @@ public:
 	nw4r::lyt::Picture *P_SBBase_02;	  // 0x24C
 	nw4r::lyt::Picture *P_SBBase_03;	  // 0x250
 	nw4r::lyt::Picture *P_SBBase_04;	  // 0x254
-	nw4r::lyt::Picture *P_back;			  // 0x258 - Shown if the game is in widescreen mode
-	nw4r::lyt::Picture *P_backWhite;	  // 0x25C - Shown if the game is in 4:3 mode
+	nw4r::lyt::Picture *P_back;			  // 0x258 -- Shown if the game is in widescreen mode
+	nw4r::lyt::Picture *P_backWhite;	  // 0x25C -- Shown if the game is in 4:3 mode
 	nw4r::lyt::TextBox *T_corseSelectS03; // 0x260
 	nw4r::lyt::TextBox *T_corseSelect_03; // 0x264
 
@@ -50,11 +46,14 @@ public:
 	int  previousSelection;	// 0x26C
 	bool layoutLoaded;		// 0x270
 	bool visible;			// 0x271
-	bool choiceWasMade;		// 0x272 - If true, dCourseSelectManager_c will run the code to open the relevant menu
-	bool disableInput;		// 0x273 - Enabling this will skip the button input logic (retail game never enables this)
-	bool _274;				// 0x274 - Serves no purpose? Set to true in PauseDisp state, set to 0 if it already equals 0 in updateCursor();
-	u8	 pad[3];			// 0x275 - Pad to next multiple of 4
+	bool choiceWasMade;		// 0x272 -- If true, dCourseSelectManager_c will run the code to open the relevant menu
+	bool disableInput;		// 0x273 -- Enabling this will skip the button input logic (retail game never enables this)
+	bool _274;				// 0x274 -- Serves no purpose? Set to true in PauseDisp state, set to 0 if it already equals 0 in updateCursor();
+	u8	 pad[3];			// 0x275 -- Pad to next multiple of 4
 
+
+	dCourseSelectMenu_c();  // 0x8077A780
+	~dCourseSelectMenu_c(); // 0x8077A980
 
 	int onCreate();		 // 0x8077AA10
 	int beforeExecute(); // 0x8077AC60
@@ -62,10 +61,12 @@ public:
 	int onDraw();		 // 0x8077AD20
 	int onDelete();		 // 0x8077AD60
 
-	bool loadLayout();	 // 0x8077AB70 - Sets up layout data and animations, gets panes in the class
+	bool loadLayout();	 // 0x8077AB70 -- Sets up layout data and animations, gets panes in the class
 	// Cursor will target P_SBBase_0X panes
 	// Layout uses cursor ID 4
-	void updateCursor(); // 0x8077AD70 - Updates SelectCursor to target the selected button
+	void updateCursor(); // 0x8077AD70 -- Updates SelectCursor to target the selected button
+
+	static dCourseSelectMenu_c *build(); // 0x8077A750
 
 	USING_STATES(dCourseSelectMenu_c);
 	REF_NINTENDO_STATE(InitWait);

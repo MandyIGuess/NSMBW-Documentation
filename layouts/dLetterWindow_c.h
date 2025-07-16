@@ -3,9 +3,6 @@
 
 /* LETTER_WINDOW
  - Actor ID 746 [KR/TW: 748; CN: 750]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x80945560
  - Build Function:	0x80789BB0
@@ -13,7 +10,6 @@
  - Constructor:		0x80789BE0
  - Destructor:		0x80789DF0
  - State Init:		0x8078A790
- - Class Instance:	N/A
 */
 
 // Size: 0x258
@@ -38,8 +34,11 @@ public:
 	bool visible;	   // 0x251
 	bool animActive;   // 0x252
 	u8   pad;		   // 0x253
-	int playerCount;   // 0x254 - Used to determine BMG message ID
+	int playerCount;   // 0x254 -- Used to determine BMG message ID
 
+
+	dLetterWindow_c();  // 0x80789BE0
+	~dLetterWindow_c(); // 0x80789DF0
 
 	int onCreate();		 // 0x80789E80
 	int beforeExecute(); // 0x8078A000
@@ -48,6 +47,8 @@ public:
 	int onDelete();		 // 0x8078A100
 
 	bool loadLayout(); // 0x80789F20
+
+	static dLetterWindow_c *build(); // 0x80789BB0
 
 	USING_STATES(dLetterWindow_c);
 	REF_NINTENDO_STATE(StartWait);

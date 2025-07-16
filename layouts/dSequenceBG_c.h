@@ -3,17 +3,12 @@
 
 /* SEQUENCE_BG
  - Actor ID 721 [KR/TW: 723; CN: 725]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x8094EC40
  - Build Function:	0x807AD5F0
  - Vtable:			0x8094F088
  - Constructor:		0x807AD620
  - Destructor:		0x807AD670
- - State Init:		N/A
- - Class Instance:	N/A
 */
 
 /* NOTES:
@@ -72,11 +67,16 @@ public:
 	u8   pad[3];	   // 0x27D
 
 
+	dSequenceBG_c();  // 0x807AD620
+	~dSequenceBG_c(); // 0x807AD670
+
 	int onCreate();	 // 0x807AD6E0
 	int onExecute(); // 0x807AD9B0
 	int onDraw();	 // 0x807ADA10
 	int onDelete();	 // 0x807ADA50
 
-	bool loadLayout();	 // 0x807AD800 - Sets up layout data and animations, gets panes in the class
-	void loadTextures(); // 0x807AD8C0 - Loads external textures and binds them to layout panes
+	bool loadLayout();	 // 0x807AD800 -- Sets up layout data and animations, gets panes in the class
+	void loadTextures(); // 0x807AD8C0 -- Loads external textures and binds them to layout panes
+
+	static dSequenceBG_c *build(); // 0x807AD5F0
 };

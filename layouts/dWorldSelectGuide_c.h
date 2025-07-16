@@ -3,17 +3,12 @@
 
 /* WORLD_SELECT_GUIDE
  - Actor ID 690 [KR/TW: 690; CN: 692]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x8098E948
  - Build Function:	0x8092B3E0
  - Vtable:			0x8098EAF0
  - Constructor:		0x8092B410
  - Destructor:		0x8092B460
- - State Init:		N/A
- - Class Instance:	N/A
 */
 
 // Size: 0x238
@@ -44,6 +39,9 @@ public:
 	float titleTransY;	// 0x234 -- Current Y translation of N_title
 
 
+	dWorldSelectGuide_c();	// 0x8092B410
+	~dWorldSelectGuide_c(); // 0x8092B460
+
 	int onCreate();		 // 0x8092B4D0
 	int beforeExecute(); // 0x8092B6B0
 	int onExecute();	 // 0x8092B6F0
@@ -53,4 +51,6 @@ public:
 	bool loadLayout();     // 0x8092B5A0 -- Sets up layout data and animations, gets panes in the class
 	void updateWorldNum(); // 0x8092B7B0 -- Updates worldNum to nextWorldNum, then writes worldNum to T_textBox_00
 	void updatePochi();    // 0x8092B7E0 -- If updatePochi is true, updates which P_pochi panes are visible
+
+	static dWorldSelectGuide_c *build(); // 0x8092B3E0
 };

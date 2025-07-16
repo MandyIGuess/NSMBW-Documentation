@@ -29,7 +29,6 @@
 // Size: 0x20
 class PauseManager_c {
 public:
-	void *vtable;		// 0x00
 	int currentState;	// 0x04 -- Sets the current PTMF state
 	int selection;		// 0x08
 	int playerNum;		// 0x0C
@@ -50,6 +49,9 @@ public:
 	bool disablePause;		// 0x1D -- Disables pausing the game
 	u8 pad[2];				// 0x1E
 
+
+	PauseManager_c();			// 0x800D0A90
+	virtual ~PauseManager_c();	// 0x800D0AC0
 
 	void initialize(); // 0x800D0B30
 	void execute();    // 0x800D0B60

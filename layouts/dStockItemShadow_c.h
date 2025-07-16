@@ -3,17 +3,12 @@
 
 /* STOCK_ITEM_SHADOW
  - Actor ID 696 [KR/TW: 696; CN: 697]
- - Sprite ID N/A
- - Settings Parameters:
-	- N/A
 
  - Profile Struct:	0x809501B0
  - Build Function:	0x807B2030
  - Vtable:			0x809503D8
  - Constructor:		0x807B2060
  - Destructor:		0x807B20B0
- - State Init:		N/A
- - Class Instance:	N/A
 */
 
 // Size: 0x280
@@ -52,6 +47,9 @@ public:
 	int  powerupCounts[7]; // 0x264 -- These are set by dStockItem_c::storeCountToShadow() (0x807B0340)
 
 
+	dStockItemShadow_c();  // 0x807B2060
+	~dStockItemShadow_c(); // 0x807B20B0
+
 	int onCreate();		 // 0x807B2120
 	int beforeExecute(); // 0x807B2280
 	int onExecute();	 // 0x807B22C0
@@ -60,4 +58,6 @@ public:
 
 	bool loadLayout(); // 0x807B21B0 -- Sets up layout data and gets panes in the class
 	void update();	   // 0x807B2370 -- Updates powerup count textboxes if needsUpdate is true
+
+	static dStockItemShadow_c *build(); // 0x807B2030
 };

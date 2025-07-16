@@ -6,14 +6,11 @@
  - Vtable:			0x80311130
  - Constructor:		0x8008ED70
  - Destructor:		0x8008F0D0
- - State Init:		N/A
- - Class Instance:	N/A
 */
 
 // Size: 0x34
 class dCyuukan_c {
 public:
-	void *vtable;			 // 0x00
 	int checkpointID;		 // 0x04 -- ID of the checkpoint (0 = First, 1 = Second). Default value is -1
 	Vec playerSpawnPos;		 // 0x08 -- Position of entrance linked to the checkpoint. This does not update if the entrance is moved after getting the checkpoint.
 	int direction;			 // 0x14
@@ -26,6 +23,9 @@ public:
 	u32 starCoinStatus[3];	 // 0x20 -- CharID of the player who collected a Star Coin. Default value is 4
 	u32 checkpointCharID[2]; // 0x2C -- CharID of the player who collected a checkpoint. Default value is 4
 
+
+	dCyuukan_c();		   // 0x8008ED70
+	virtual ~dCyuukan_c(); // 0x8008F0D0
 
 	void clear();			  // 0x8008EDB0 -- Resets all data back to the default values
 	bool checkEntry();		  // 0x8008EEC0 -- Checks if the players in the checkpointCharID array are in the game
