@@ -12,6 +12,7 @@ Feel free to remove any comments, they're just present to help explain what does
 
 ## Documented Classes
 - `dCyuukan_c`: Contains temporary level data that gets used when starting a level from a checkpoint
+- `dInfo_c`: Contains information and data used throughout the game
 - `dStageTimer_c`: Manages the level clock/timer
 - `dStartInfo_c`: Stores info when the level starts
 - `PauseManager_c`: Manages the stage Pause Menu
