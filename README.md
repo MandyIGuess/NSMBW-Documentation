@@ -18,6 +18,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `PauseManager_c`: Manages the stage Pause Menu
 
 ### Layouts
+- `dContinue_c`: Player Continues screen
 - `dCourseSelectMenu_c`: Pause menu for the World Map
 - `dInfoWindow_c`: Savefile copy/deletion confirmation window
 - `dLetterWindow_c`: Bowser Jr.'s letter
