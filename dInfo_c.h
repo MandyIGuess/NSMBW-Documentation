@@ -21,7 +21,7 @@ enum WmPlayerMovementType_e {
 enum MultiModeClearType_e {
 	NONE = 0,
 	CLEAR,
-	SINGLE_CLEAR, // Set when getting ALL_CLEAR in singleplayer. Might behave differently in Free Mode
+	SINGLE_CLEAR, // Set when getting ALL_CLEAR in singleplayer (in Coin Battle). Might behave differently in Free Mode
 	ALL_CLEAR,
 	ALREADY_CLEARED
 };
@@ -183,6 +183,13 @@ public:
 		u8   level2;		 // 0x0F
 	};
 
+	enum IbaraMode_e {
+		NONE = 0,
+		UNK_01 = 1,
+		UNK_02 = 2,
+		UNK_03 = 3,
+	};
+
 
 	dInfo_c();			// 0x800BB0E0
 	virtual ~dInfo_c(); // 0x800BB130
@@ -193,29 +200,30 @@ public:
 	void PlayerStateInit();  // 0x800BB180 -- Sets initial charIDs
 	void CourseSelectInit(); // 0x800BB1C0 -- Sets initial values for all World Map data
 
-	void addStockItem(int item); // 0x800BB330 -- Adds one of the specified item
-	void subStockItem(int item); // 0x800BB380 -- Removes one of the specified item
-	int  getStockItem(int item); // 0x800BB3D0 -- Gets the amount of the specified item
-	void clsStockItem(int item); // 0x800BB410 -- Resets the specified item count to 0
+	void addStockItem(int item);	   // 0x800BB330 -- Adds one of the specified item
+	void subStockItem(int item);	   // 0x800BB380 -- Removes one of the specified item
+	int  getStockItem(int item) const; // 0x800BB3D0 -- Gets the amount of the specified item
+	void clsStockItem(int item);	   // 0x800BB410 -- Resets the specified item count to 0
 
 	void initGame();	  // 0x800BB450 -- Resets most of the class data, calls CourseSelectInit() and initMultiMode()
 	void initMultiMode(); // 0x800BB5B0 -- Resets the win counts, clearTypes for courses, and data for favorited courses
 
-	void startGame(StartGameInfo_s *startGameInfo); // 0x800BB7D0 -- Begins a stage with the information in `startGameInfo`
-	void startStaffCredit();						// 0x800BB8D0 -- Begins the credits stage (01-40)
+	void startGame(const StartGameInfo_s *startGameInfo); // 0x800BB7D0 -- Begins a stage with the information in `startGameInfo`
+	void startStaffCredit();							  // 0x800BB8D0 -- Begins the credits stage (01-40)
 
 	void initStage(); // 0x800BB940 -- Resets stage data when entering a stage
 
-	void SetWorldMapEnemy(int world, int enemyIdx, dInfo_c::enemy_s *enemyStruct); // 0x800BBBC0
-	dInfo_c::enemy_s *GetWorldMapEnemy(int world, int enemyIdx);				   // 0x800BBC00
-	void SetMapEnemyInfo(int world, int enemyIdx, int submapID, int pathNode);	   // 0x800BBC20
-	void SetMapEnemyReverse(int world, int enemyIdx, int value);				   // 0x800BBC40 -- Unofficial name
-	void GetMapEnemyInfo(int world, int enemyIdx, dInfo_c::enemy_s *out);		   // 0x800BBC60 -- Puts data from enemy into `out`
+	void SetWorldMapEnemy(int world, int enemyIdx, const dInfo_c::enemy_s *enemyStruct); // 0x800BBBC0
+	dInfo_c::enemy_s *GetWorldMapEnemy(int world, int enemyIdx);						 // 0x800BBC00
+	void SetMapEnemyInfo(int world, int enemyIdx, int submapID, int pathNode);			 // 0x800BBC20
+	void SetMapEnemyReverse(int world, int enemyIdx, int value);						 // 0x800BBC40 -- Unofficial name
+	void GetMapEnemyInfo(int world, int enemyIdx, dInfo_c::enemy_s *out);				 // 0x800BBC60 -- Puts data from enemy into `out`
 
-	void SetIbaraNow(int world, int value); // 0x800BBCA0
-	void SetIbaraOld(int world, int value); // 0x800BBCB0
-	int  GetIbaraNow(int world, int value); // 0x800BBCC0
-	int  GetIbaraOld(int world, int value); // 0x800BBCD0
+	void SetIbaraNow(int world, IbaraMode_e value); // 0x800BBCA0
+	void SetIbaraOld(int world, IbaraMode_e value); // 0x800BBCB0
+
+	int  GetIbaraNow(int world); // 0x800BBCC0
+	int  GetIbaraOld(int world); // 0x800BBCD0
 
 	static StartGameInfo_s m_startGameInfo; // 0x80315E90 -- Contains the info used when entering the current level
 	static dStartInfo_c    m_startInfo;		// 0x80359054
