@@ -119,8 +119,8 @@ public:
 		u8  pad[3];	  // 0x0D
 	};
 	enemy_s ambushData[10][4]; // 0xA0  -- Formerly known as "GMgrA0"
-	int wmIbaraNow[10];		   // 0x320
-	int wmIbaraOld[10];		   // 0x348
+	int wmIbaraNow[10];		   // 0x320 -- Current WM_IBARA (World 5 vines) location. See `IbaraMode_e` enum
+	int wmIbaraOld[10];		   // 0x348 -- Previous vine location
 	int wmPlayerMovementType;  // 0x370 -- See `WmPlayerMovementType_e` enum
 	int _374;				   // 0x374 -- Seems to be unused, set to 0 in CourseSelectInit()
 	int treasureShipSubmap;	   // 0x378 -- Submap that WM_TREASURESHIP is located in
@@ -213,11 +213,13 @@ public:
 		u8   level2;		 // 0x0F -- Determines the actual course archive that is loaded
 	};
 
+	// These correspond to the A, B, and C flags on routes in World 5. For example, if MODE_A is the current value, all routes
+	// with the A flag will be unavailable. This behavior is controlled by the daWmMap_c function at 0x808E2380
 	enum IbaraMode_e {
 		NONE = 0,
-		UNK_01 = 1,
-		UNK_02 = 2,
-		UNK_03 = 3,
+		MODE_A = 1,
+		MODE_B = 2,
+		MODE_C = 3,
 	};
 
 
