@@ -33,6 +33,7 @@ Feel free to remove any comments, they're just present to help explain what does
 - `dScRestartCrsin_c`: Used to start certain levels, such as the titlescreen, Super Guide replays, and Hint Movies
 
 ### Stage Objects
+- `daEnSnakeBlock_c`: Snake Block chains [Sprite 166]
 - `daWakiKeronpa_c`: Location-based respawner for Fire Chomps [Sprite 217]
 
 ### Utility
