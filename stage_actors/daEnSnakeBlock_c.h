@@ -31,12 +31,12 @@ public:
     // Size: 0x1B8
     class dBlock_c {
     public:
-        nw4r::g3d::ResFile mResFile; // 0x04
-        m3d::mdl_c mModel;           // 0x08
-        m3d::anmClr_c mAnmClr;       // 0x48
-        m3d::anmTexSrt_c mAnmTexSrt; // 0x74
+        nw4r::g3d::ResFile mResFile;        // 0x04
+        m3d::mdl_c mModel;                  // 0x08
+        m3d::anmClr_c mAnmClr;              // 0x48
+        nw4r::g3d::ResAnmTexSrt mResTexSrt; // 0x74
+        m3d::anmTexSrt_c mAnmTexSrt;        // 0x78
 
-        int _A0;      // 0xA0 -- Unused, set to 0 in the ctor
         Vec mPos;     // 0xA4 -- Position of the block
         Vec mSpeed;   // 0xB0 -- Used to calculate the new position
         Vec mLastPos; // 0xBC -- Previous block position
@@ -69,7 +69,7 @@ public:
     // Size: 0x1BC
     class dCtrlBlock_c : public dBlock_c {
     public:
-        Vec mSnakeSpeed; // 0x1B8 -- Movement speed from the Snake Block spritedata
+        int mSnakeSpeed; // 0x1B8 -- Movement speed from the Snake Block spritedata
 
         dCtrlBlock_c();          // 0x80aa6890
         virtual ~dCtrlBlock_c(); // 0x80aa6ac0
