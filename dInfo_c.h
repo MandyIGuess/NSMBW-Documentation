@@ -49,8 +49,8 @@ enum GameFlag_e {
 	COIN_BATTLE					 = 0x40,
 	SKIP_BOOT_SCREENS			 = 0x80000,    // Automatically skips WiiStrap and ControllerInformation screens
 	SKIP_TRANSITIONS			 = 0x4000000,  // Sets all transitions to "FADE", and duration to 1 frame
-	SKIP_PREGAME_BATTERY		 = 0x40000000, // Skips the battery warning on the PreGame screen
-	SHOW_GAME_DISPLAY_COLLECTION = 0x80000000, // Forces Star Coins to be shown on the HUD, also skips PreGame battery warning
+	SKIP_PREGAME_WARNING		 = 0x40000000, // Skips the battery and controller disconnect warnings on the PreGame screen
+	SHOW_GAME_DISPLAY_COLLECTION = 0x80000000, // Forces Star Coins to be shown on the HUD, also skips PreGame warnings
 };
 
 enum StartKinokoType_e {
